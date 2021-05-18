@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="矢口卓球店">
+        <title>矢口卓球店</title>
+        <meta name="description" content="お客様のニーズに合った商品をお届け">
+        <link rel="stylesheet" href="style.css/style.css">
+        <link href="https://fonts.google.com/"rel="stylesheet">
+        
+    </head>
+    <body>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <header class="page-header wrapper">
+    <h1>矢口卓球店</h1>
+        <ul class="header-nav">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">オススメ商品情報</a></li>
+            <li><a href="#">卓球用品</a></li>
+            <li><a href="#">店舗案内</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <h2 class="main-head">オススメ商品</h2>
+    <ul class="slide">
+        <li><a href="#"><img src=".images/picture3.jpg" /></a><a href="#"><p>ラケット</p></a></li>
+        <li><a href="#"><img src=".images/picture4.jpg" /></a><a href="#"><p>シューズ</p></a></li>
+        <li><a href="#"><img src=".images/picture5" /></a><a href="#"><p>ユニフォーム</p></a></li>
+        <li><a href="#"><img src=".images/picture7.jpg"/></a><a href="#"><p>ボール</p></a></li>
+        <li><a href="#"><img src=".images/picture8.jpg"/></a><a href="#"><p>初心者向けラケット</p></a></li>
+        <li><a href="#"><img src=".images/picture9.jpg"/></a><a href="#"></a><p>新作入荷しました！</p></a></li>   
+    </ul>
+    <div class="main-info">
+    <h2>店舗情報</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3204.7963346908464!2d139.89626241493102!3d36.55902337999891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601f67744cb10813%3A0xcffb13407e050083!2z5a6H6YO95a6u6aeF!5e0!3m2!1sja!2sjp!4v1619956835729!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>     
+</div>
+</main>
+<footer class="page-footer">
+    <p class="lead-form">お問い合わせ</p>
+
+    <form>
+      
+      <div class="item">
+        <label class="label">お名前</label>
+        <input class="inputs" type="text" name="name">
+      </div>
+      
+      <div class="item">
+        <label class="label">メールアドレス</label>
+        <input class="inputs" type="email" name="email">
+      </div>
+    
+      <div class="item">
+        <p class="label">予約メニュー</p>
+        <div class="inputs">
+        <input type="radio" name="menu" value="男"><label for="cut">男</label>
+        <input type="radio" name="menu" value="女"><label for="cut-color">女</label>
+        <input type="radio" name="menu" value="その他"><label for="headspa">その他</label>
+        </div>
+      </div>
+      
+      <div class="item">
+        <label class="label">お問い合わせ内容</label>
+        <textarea class="inputs"></textarea>
+      </div>
+    
+      <div class="btn-area">
+        <input type="submit" value="予約する">
+      </div>
+  
+  
+</footer>
+<script type="text/javascript">
+    var loop = setInterval(function() {
+        //li先頭要素のクローンを作成
+        var clone = $(".slide li:first").clone(true);
+        //li先頭要素のマージンレフトにマイナスを指定しアニメーションさせる
+        $(".slide li:first").animate({
+        marginLeft : "-100%"
+        }, {
+        duration : 3000,    
+        complete : function() {
+            //処理完了時に先頭要素を削除
+            $(".slide li:first").remove();
+            //クローンをliの最後に追加
+            clone.clone(true).insertAfter($(".slide li:last"));
+        }
+        });
+    }, 0);
+    </script>
+</body>
+</html>
+
